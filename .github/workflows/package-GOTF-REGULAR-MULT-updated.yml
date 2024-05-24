@@ -20,8 +20,8 @@ jobs:
         # sitemap: ['https://essencevitae.com/sitemap_en_notes.xml', 'https://essencevitae.com/sitemap_en_general.xml', 'https://essencevitae.com/sitemap_en_forum.xml', 'https://essencevitae.com/sitemap_en_brands.xml']
     steps:
       - name: GOTF-ALL-MULT4-matrix
-        uses: MuhammadTariqGigani/w3school-html-practice-comp@main
-        # uses: MuhammadTariqGigani/w3school-html-practice-private@main #private se work nhi karta, compile kr ke public
+        # uses: MuhammadTariqGigani/w3school-html-practice-comp@main
+        uses: MuhammadTariqGigani/w3school-html-practice-private@main #private se work nhi karta, compile kr ke public
         with:
           # sitemap-location:  ${{ matrix.sitemap }}
           sitemap-location:  ${{ secrets.ST_LOC_GOTF }} #https://grabify.link/AOOIAC
