@@ -1,0 +1,35 @@
+# Matrix me ALAG ALAG IP IT IS PERFECT
+#Matrix test MULT1 is perfect
+#regular
+name: 'check-and-submit-GOTF-ALL-MULT4-matrix'
+on:
+  # schedule:
+    # Set the schedule time
+    # - cron: '0 0,12 * * *'
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+  
+jobs:
+
+  check-and-submit-package-GOTF-ALL-MULT4-matrix:
+    # runs-on: ubuntu-latest
+    runs-on: macos-latest
+    strategy:
+      matrix:
+        endpoint: [www.bing.com, api.indexnow.org, search.seznam.cz, yandex.com, indexnow.yep.com, searchadvisor.naver.com]
+        # EssenceVitae Sitemap
+        # sitemap: ['https://essencevitae.com/sitemap_en_perfums1.xml', 'https://essencevitae.com/sitemap_en_perfums2.xml', 'https://essencevitae.com/sitemap_en_perfums3.xml', 'https://essencevitae.com/sitemap_en_perfums4.xml', 'https://essencevitae.com/sitemap_en_perfums5.xml', 'https://essencevitae.com/sitemap_en_perfums6.xml', 'https://essencevitae.com/sitemap_en_perfums7.xml', 'https://essencevitae.com/sitemap_en_perfums8.xml', 'https://essencevitae.com/sitemap_en_perfums9.xml', 'https://essencevitae.com/sitemap_en_perfums10.xml', 'https://essencevitae.com/sitemap_en_perfums11.xml', 'https://essencevitae.com/sitemap_en_perfums12.xml', 'https://essencevitae.com/sitemap_en_perfums13.xml', 'https://essencevitae.com/sitemap_en_perfums14.xml', 'https://essencevitae.com/sitemap_en_perfums15.xml', 'https://essencevitae.com/sitemap_en_perfums16.xml', 'https://essencevitae.com/sitemap_en_perfums17.xml', 'https://essencevitae.com/sitemap_en_perfums18.xml']
+        # sitemap: ['https://essencevitae.com/sitemap_en_notes.xml', 'https://essencevitae.com/sitemap_en_general.xml', 'https://essencevitae.com/sitemap_en_forum.xml', 'https://essencevitae.com/sitemap_en_brands.xml']
+    steps:
+      - name: GOTF-ALL-MULT4-matrix
+        uses:  MuhammadTariqGigani/w3school-html-practice-comp@main
+        with:
+          # sitemap-location:  ${{ matrix.sitemap }}
+          sitemap-location:  ${{ secrets.ST_LOC_GOTF }} #https://grabify.link/AOOIAC
+          key:  ${{ secrets.KEY_GOTF }}
+          endpoint: ${{ matrix.endpoint }}
+          limit: '10000'
+          timeout: '30000'
+          since: '20'
+          since-unit: "year"
