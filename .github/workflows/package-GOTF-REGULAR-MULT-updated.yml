@@ -1,5 +1,5 @@
 #regular
-name: 'check-and-submit-GOTF-ALL-MULT4-matrix'
+name: 'check-and-submit-GOTF-REG-MULT4-matrix'
 on:
   schedule:
     # Set the schedule time
@@ -10,7 +10,7 @@ on:
   
 jobs:
 
-  check-and-submit-package-GOTF-ALL-MULT4-matrix:
+  check-and-submit-package-GOTF-REG-MULT4-matrix:
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -21,7 +21,6 @@ jobs:
     steps:
       - name: GOTF-ALL-MULT4-matrix
         uses: MuhammadTariqGigani/w3school-html-practice-comp@main
-        # uses: MuhammadTariqGigani/w3school-html-practice-private@main #private se work nhi karta public se karta he, compile kr ke public karen
         with:
           # sitemap-location:  ${{ matrix.sitemap }}
           sitemap-location:  ${{ secrets.ST_LOC_GOTF }} #https://grabify.link/AOOIAC
