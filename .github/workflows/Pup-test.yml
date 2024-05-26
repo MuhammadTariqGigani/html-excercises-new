@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: pupPak
-        uses:  MuhammadTariqGigani/action-puppeteer-script@v0
+        uses:  MuhammadTariqGigani/action-puppeteer-script@main
         with:
           script: |
             const page = await browser.newPage();
