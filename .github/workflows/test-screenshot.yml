@@ -1,8 +1,6 @@
 name: screenshots ci actions
 on:
-  push:
-    branches:
-    - master
+  workflow_dispatch:
 
 jobs:
   screenshots:
