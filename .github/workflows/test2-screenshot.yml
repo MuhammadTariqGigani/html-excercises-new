@@ -1,9 +1,0 @@
-name: screenshots Test2
-on:
-  workflow_dispatch:
-  
-jobs:
-  screenshots:
-    runs-on: ubuntu-latest
-    steps:
-    - uses: swinton/screenshot-website@v1.x
