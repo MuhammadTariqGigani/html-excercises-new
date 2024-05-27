@@ -14,4 +14,13 @@ jobs:
             await page.goto('https://google.com');
             const title = await page.$eval('title', el => el.textContent);
             return title;
-          run: echo '${{ steps.get-title.outputs.result }}' # This will puts `"Example Domain"`
+          # run: echo '${{ steps.get-title.outputs.result }}' # This will puts `"Example Domain"`
+      - name: screenshots-ci-action
+        uses: xxidbr9/screenshots-action@v1.1.18
+        with:
+          # url: https://grabify.link/7JHS10
+          devices: iPhone 6,iPhone 6 landscape,Nexus 7,Pad Pro,Galaxy S III landscape,iPad Pro landscape
+      - uses: actions/upload-artifact@v4
+        with:
+          path: screenshots
+          name: Download-screenshots
