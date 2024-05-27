@@ -16,7 +16,9 @@ jobs:
       with:
         # url: https://grabify.link/7JHS10
         url: https://animalsevent.com
-        devices: iPhone 6,iPhone 6 landscape,Nexus 7,Pad Pro,Galaxy S III landscape,iPad Pro landscape
+        # devices: iPhone 6,iPhone 6 landscape,Nexus 7,Pad Pro,Galaxy S III landscape,iPad Pro landscape
+        devices: iPhone 6
+        delay: 10000
     - uses: actions/upload-artifact@v4
       with:
         path: screenshots
