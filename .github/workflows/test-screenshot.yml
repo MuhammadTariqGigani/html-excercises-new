@@ -12,13 +12,13 @@ jobs:
       env:
         CI: 'true'
     - name: screenshots-ci-action
-      uses: xxidbr9/screenshots-action@v1.1.18
+      uses: flameddd/screenshots-ci-action@v2.1.0
       with:
         # url: https://grabify.link/7JHS10
         url: https://animalsevent.com
         # devices: iPhone 6,iPhone 6 landscape,Nexus 7,Pad Pro,Galaxy S III landscape,iPad Pro landscape
         devices: iPhone 6
-        delay: 10000
+        waitUntil: networkidle0
     - uses: actions/upload-artifact@v4
       with:
         path: screenshots
