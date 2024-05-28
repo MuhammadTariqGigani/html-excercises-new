@@ -17,7 +17,8 @@ jobs:
       with:
         # url: https://grabify.link/7JHS10
         # url: https://youtu.be/4a6-fZ2Caq4
-        url: https://www.essencevitae.com/Perfumes/Guerlain/l-homme-ideal-parfum
+        # url: https://www.essencevitae.com/Perfumes/Guerlain/l-homme-ideal-parfum
+        url: https://whoer.net/
         # devices: iPhone 6,iPhone 6 landscape,Nexus 7,Pad Pro,Galaxy S III landscape,iPad Pro landscape
         devices: iPhone 6
         waitForSelector: 'hello-world-not-exist'
