@@ -12,6 +12,10 @@ jobs:
       uses: mujo-code/puppeteer-headful@master
       env:
         CI: 'true'
+    - name: Set up WARP
+      uses: fscarmen/warp-on-actions@v1.1
+      with:
+        stack: dual   # Optional. Support [ ipv4, ipv6, dual ]. Default is dual.
     - name: screenshots-ci-action
       uses: flameddd/screenshots-ci-action@v2.1.0
       with:
