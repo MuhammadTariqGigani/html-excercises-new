@@ -18,8 +18,8 @@ jobs:
         id: google-step
         with:
           provider: google
-          lang: ms-en
-          source: Kemenangan
+          lang: en-ur
+          source: https://github.com/fabasoad/translation-action/blob/main/README.md
       - name: Print the result
         run: echo "Translation is '${{ steps.google-step.outputs.text }}'"
         shell: sh
