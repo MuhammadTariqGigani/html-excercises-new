@@ -14,12 +14,19 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - name: Prepare source
+        id: params
+        run: |
+            source="gt.txt"
+            # echo "${TEXT}" > "${source}"
+            # fi
+            echo "source=${source}" >> "$GITHUB_OUTPUT"
       - uses: fabasoad/translation-action@main
         id: google-step
         with:
           provider: google
           lang: en-ur
-          source: "gt.txt"
+          source: ${{ steps.params.outputs.text }}
       - name: Print the result
         run: echo "Translation is '${{ steps.google-step.outputs.text }}'"
         shell: sh
